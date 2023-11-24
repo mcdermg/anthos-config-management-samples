@@ -1,3 +1,27 @@
+#apiVersion: configsync.gke.io/v1beta1
+#kind: RootSync
+#metadata:
+#  name: helm-chart-1
+#  namespace: config-management-system
+#spec:
+#  sourceType: helm
+#  sourceFormat: unstructured
+#  # Autopilot known issue need to bump the defult resource levels
+#  override:
+#    resources:
+#      - containerName: reconciler
+#        cpuLimit: 1
+#        cpuRequest: 800m
+#        memoryLimit: 2Gi
+#        memoryRequest: 1Gi  
+#  helm:
+#    repo: https://charts.bitnami.com/bitnami
+#    chart: nginx
+#    version: v15.4.2
+#    releaseName: nginx-bitnami
+#    namespace: nginx
+#    auth: none
+
 apiVersion: configsync.gke.io/v1beta1
 kind: RootSync
 metadata:
@@ -13,11 +37,11 @@ spec:
         cpuLimit: 1
         cpuRequest: 800m
         memoryLimit: 2Gi
-        memoryRequest: 1Gi  
+        memoryRequest: 1Gi
   helm:
-    repo: https://charts.bitnami.com/bitnami
-    chart: nginx
-    version: v15.4.2
-    releaseName: nginx-bitnami
-    namespace: nginx
+    repo: https://grafana.github.io/helm-charts
+    chart: grafana
+    version: v7.0.8
+    releaseName: grafana
+    namespace: grafana
     auth: none
