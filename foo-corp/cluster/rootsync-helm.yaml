@@ -2,7 +2,7 @@ apiVersion: configsync.gke.io/v1beta1
 kind: RootSync
 metadata:
   name: helm-chart-1
-  #namespace: config-management-system
+  namespace: config-management-system
 spec:
   sourceType: helm
   sourceFormat: unstructured
