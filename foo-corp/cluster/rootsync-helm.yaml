@@ -6,14 +6,6 @@ metadata:
 spec:
   sourceType: helm
   sourceFormat: unstructured
-  # Autopilot known issue need to bump the defult resource levels
-  override:
-    resources:
-      - containerName: reconciler
-        cpuLimit: 1
-        cpuRequest: 800m
-        memoryLimit: 2Gi
-        memoryRequest: 1Gi  
   helm:
     repo: https://charts.bitnami.com/bitnami
     chart: nginx
