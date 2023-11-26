@@ -1,0 +1,15 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: helm-2
+  namespace: config-management-system
+spec:
+  sourceType: helm
+  sourceFormat: unstructured
+  helm:
+    repo: https://grafana.github.io/helm-charts
+    chart: loki-stack
+    version: v2.9.11
+    releaseName: loki-stack
+    namespace: monitoring
+    auth: none  
