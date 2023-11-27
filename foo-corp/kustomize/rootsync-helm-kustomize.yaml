@@ -1,0 +1,31 @@
+#apiVersion: configsync.gke.io/v1beta1
+#kind: RootSync
+#metadata:
+#  name: helm-chart-1
+#  namespace: config-management-system
+#spec:
+#  sourceType: helm
+#  sourceFormat: unstructured
+#  helm:
+#    repo: https://grafana.github.io/helm-charts
+#    chart: grafana
+#    version: v7.0.8
+#    releaseName: grafana
+#    namespace: grafana
+#    auth: none
+
+  # root-sync.yaml
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: kustomize-helm
+  namespace: config-management-system
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/mcdermg/helm-config-sync 
+    branch: unstructured
+    dir: kustomize
+    auth: ssh
+    secretRef:
+      name: git-creds # I dont think this is needed but leaving for testing for sake of expedience
