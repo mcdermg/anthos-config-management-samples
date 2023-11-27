@@ -24,7 +24,7 @@ spec:
   sourceFormat: unstructured
   git:
     repo: https://github.com/mcdermg/helm-config-sync 
-    branch: unstructured
+    branch: main
     #dir: foo-corp/kustomize
     auth: ssh
     secretRef:
