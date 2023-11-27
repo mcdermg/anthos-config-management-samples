@@ -25,7 +25,7 @@ spec:
   git:
     repo: https://github.com/mcdermg/helm-config-sync 
     branch: unstructured
-    dir: kustomize
+    dir: foo-corp/kustomize
     auth: ssh
     secretRef:
       name: git-creds # I dont think this is needed but leaving for testing for sake of expedience
