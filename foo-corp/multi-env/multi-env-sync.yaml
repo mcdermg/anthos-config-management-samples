@@ -1,0 +1,14 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name:
+  namespace: config-management-system
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/GoogleCloudPlatform/anthos-config-management-samples
+    branch: main
+    dir: multi-environments-kustomize/config-source 
+    auth: ssh
+    secretRef:
+      name: git-creds # I dont think this is needed but leaving for testing for sake of expedience
