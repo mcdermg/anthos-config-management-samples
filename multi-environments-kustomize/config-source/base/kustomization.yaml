@@ -15,9 +15,11 @@
 # [START anthosconfig_multi_environments_kustomize_config_source_base_kustomization] 
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: default
 bases:
 - foo/
 resources:
 - pod-creator-clusterrole.yaml
 - pod-creator-rolebinding.yaml
+- deployment.yaml
 # [END anthosconfig_multi_environments_kustomize_config_source_base_kustomization] 
