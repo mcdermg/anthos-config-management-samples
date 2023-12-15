@@ -6,7 +6,7 @@ metadata:
 spec:
   sourceFormat: unstructured
   git:
-    repo: https://github.com/GoogleCloudPlatform/anthos-config-management-samples
+    repo: https://github.com/mcdermg/anthos-config-management-samples
     branch: unstructured
     dir: multi-environments-kustomize/config-source/base
     auth: ssh
