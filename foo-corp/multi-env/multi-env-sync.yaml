@@ -7,7 +7,7 @@ spec:
   sourceFormat: unstructured
   git:
     repo: https://github.com/GoogleCloudPlatform/anthos-config-management-samples
-    branch: main
+    branch: unstructured
     dir: multi-environments-kustomize/config-source/base
     auth: ssh
     secretRef:
