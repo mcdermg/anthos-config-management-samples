@@ -7,13 +7,13 @@ spec:
   sourceFormat: unstructured
   sourceType: helm
   helm:
-    repo: oci://us-central1-docker.pkg.dev/anthos-gsd-lab-01/quickstart-helm-repo
-    chart: hello-chart
-    version: 0.1.0
-    releaseName: test-hello-chart
+    repo: oci://us-central1-docker.pkg.dev/anthos-gsd-lab-01/oci-repo
+    chart: mysql
+    version: 9.16.2
+    releaseName: test-mysql
     namespace: test
     auth: gcpserviceaccount
-    gcpServiceAccountEmail: serviceAccount:oci-174@anthos-gsd-lab-01.iam.gserviceaccount.com
+    gcpServiceAccountEmail: oci-174@anthos-gsd-lab-01.iam.gserviceaccount.com
     values:
       image:
         pullPolicy: Always
