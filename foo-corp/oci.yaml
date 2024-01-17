@@ -1,0 +1,26 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: oci
+  namespace: config-management-system
+spec:
+  sourceFormat: unstructured
+  sourceType: helm
+  helm:
+    repo: oci://us-central1-docker.pkg.dev/anthos-gsd-lab-01/quickstart-helm-repo
+    chart: hello-chart
+    version: 0.1.0
+    releaseName: test-hello-chart
+    namespace: test
+    auth: gcpserviceaccount
+    values:
+      image:
+        pullPolicy: Always
+      primary:
+        resources:
+          limits:
+            cpu: 250m
+            memory: 256Mi
+          requests:
+            cpu: 250m
+            memory: 256Mi
