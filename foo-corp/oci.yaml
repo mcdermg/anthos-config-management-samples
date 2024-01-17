@@ -12,6 +12,7 @@ spec:
     version: 0.1.0
     releaseName: test-hello-chart
     namespace: test
+    auth: none
     values:
       image:
         pullPolicy: Always
