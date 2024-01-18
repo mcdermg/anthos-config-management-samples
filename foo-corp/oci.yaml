@@ -9,7 +9,7 @@ spec:
   helm:
     repo: oci://us-central1-docker.pkg.dev/anthos-gsd-lab-01/oci-repo
     chart: mysql
-    version: 9.3.1
+    version: 9.16.2
     releaseName: my-mysql
     namespace: test
     auth: gcpserviceaccount
