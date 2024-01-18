@@ -14,17 +14,3 @@ spec:
     namespace: test
     auth: gcpserviceaccount
     gcpServiceAccountEmail: oci-artifacts-reader@anthos-gsd-lab-01.iam.gserviceaccount.com
-    # Use the optional field spec.helm.values to override default values.
-    # You can use the same format as the default values file to override
-    # default values.
-    values:
-      image:
-        pullPolicy: Always
-      primary:
-        resources:
-          limits:
-            cpu: 250m
-            memory: 256Mi
-          requests:
-            cpu: 250m
-            memory: 256Mi
